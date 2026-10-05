@@ -28,12 +28,6 @@ def calcular_valor_estacionamento(
     if not math.isfinite(horas) or horas <= 0:
         raise EstacionamentoError("Quantidade de horas inválida.")
 
-    if not isinstance(horas, (int, float)) or isinstance(horas, bool):
-        raise EstacionamentoError("horas deve ser numérico.")
-
-    if horas <= 0:
-        raise EstacionamentoError("horas deve ser maior que zero.")
-
     if tipo_veiculo not in {"carro", "moto", "utilitario"}:
         raise EstacionamentoError("tipo de veículo inválido.")
 
